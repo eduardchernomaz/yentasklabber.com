@@ -28,7 +28,7 @@ As the years went on, Klabber remained less of a quiet card game and more of a h
 
 After decades of games between players from different Brooklyn neighborhoods and local universities, it became clear that civilization required a single agreed-upon rule set. The unofficial but deeply authoritative Brooklyn Klabber Board was therefore called upon to settle the matter. After what historical records can only assume were calm, respectful, and completely uninterrupted deliberations, the official Brooklyn variant known as Yentas Klabber was established.
 
-The rules were ultimately agreed upon under the guidance of the Board's principal representatives, the legendary Luna Park Lenny and Nice Guy Steven (aka Rudy), under the stewardship of Fun Eddie. Their mission was simple: preserve the game, standardize the arguments, and ensure that future generations would at least be fighting about strategy instead of fighting about the rules.
+The rules were ultimately agreed upon under the guidance of the Board's principal representatives, the legendary Luna Park Lenny and Nice Guy Steven, under the stewardship of Fun Eddie. Their mission was simple: preserve the game, standardize the arguments, and ensure that future generations would at least be fighting about strategy instead of fighting about the rules.
 
 Today, Yentas Klabber represents the accumulated wisdom, grudges, compromises, disputed memories, and card-table diplomacy of several decades of Brooklyn play. The rules that follow should therefore be considered official — at least until somebody's father-in-law says, "That's not how we played it."
 
@@ -152,4 +152,6 @@ For the tie rule, use this sequence:
 - Igor aka Iggy
 - Lenny aka Luna Park Lenny
 - Leon aka Big Red
-- Mike aka Wolfie
+- Mike V. aka Wolfie
+- Mike B. aka Spencer
+- Steve aka Rudy
