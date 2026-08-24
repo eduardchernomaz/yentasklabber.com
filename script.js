@@ -18,6 +18,43 @@
     }, FLASH_MS);
   };
 
+  let cancelPendingScrollFlash = null;
+
+  const flashAfterScrollSettles = (target) => {
+    if (cancelPendingScrollFlash) cancelPendingScrollFlash();
+
+    const SCROLL_IDLE_MS = 130;
+    const SCROLL_MAX_MS = 1500;
+    let idleTimer = null;
+    let maxTimer = null;
+
+    const cleanup = () => {
+      window.removeEventListener("scroll", onScroll);
+      if (idleTimer) window.clearTimeout(idleTimer);
+      if (maxTimer) window.clearTimeout(maxTimer);
+      idleTimer = null;
+      maxTimer = null;
+      if (cancelPendingScrollFlash === cleanup) {
+        cancelPendingScrollFlash = null;
+      }
+    };
+
+    const triggerFlash = () => {
+      cleanup();
+      flashSection(target);
+    };
+
+    const onScroll = () => {
+      if (idleTimer) window.clearTimeout(idleTimer);
+      idleTimer = window.setTimeout(triggerFlash, SCROLL_IDLE_MS);
+    };
+
+    cancelPendingScrollFlash = cleanup;
+    window.addEventListener("scroll", onScroll, { passive: true });
+    idleTimer = window.setTimeout(triggerFlash, SCROLL_IDLE_MS);
+    maxTimer = window.setTimeout(triggerFlash, SCROLL_MAX_MS);
+  };
+
   const scrollToId = (id, updateHash) => {
     const target = document.getElementById(id);
     if (!target) return;
@@ -26,7 +63,11 @@
     if (updateHash) {
       history.pushState(null, "", `#${id}`);
     }
-    flashSection(target);
+    if (behavior === "auto") {
+      flashSection(target);
+    } else {
+      flashAfterScrollSettles(target);
+    }
     if (typeof target.focus === "function") {
       target.focus({ preventScroll: true });
     }
