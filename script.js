@@ -24,7 +24,7 @@
     if (cancelPendingScrollFlash) cancelPendingScrollFlash();
 
     const SCROLL_IDLE_MS = 130;
-    const SCROLL_MAX_MS = 1500;
+    const SCROLL_MAX_MS = 2500;
     let idleTimer = null;
     let maxTimer = null;
 
