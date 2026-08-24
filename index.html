@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yentas Klabber — Official Brooklyn Rules</title>
+  <meta name="description" content="Official four-player partnership rules for Yentas Klabber, the Brooklyn house variant.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contents">Skip to contents</a>
+
+  <header class="hero" id="top">
+    <div class="hero__inner">
+      <img class="hero__logo" src="assets/logo.png" alt="Yentas Klabber official seal" width="320" height="320">
+      <h1 class="hero__title">Yentas Klabber</h1>
+      <p class="hero__tagline">Four-player partnership Brooklyn Klabber — the official house rules.</p>
+      <p class="hero__cta-wrap">
+        <a class="btn" href="#contents">Read the rules</a>
+      </p>
+    </div>
+  </header>
+
+  <nav class="contents" id="contents" aria-label="Table of contents">
+    <h2 class="contents__title">Contents</h2>
+    <ol class="contents__list">
+      <li><a href="#history">History &amp; Origin of Yentas Klabber</a></li>
+      <li><a href="#objective-and-setup">1. Objective and Setup</a></li>
+      <li><a href="#card-ranking">2. Card Ranking and Point Values</a></li>
+      <li><a href="#dealing-and-trump">3. Dealing and Choosing Trump</a></li>
+      <li><a href="#playing-a-trick">4. Playing a Trick (aka “vzyatka”)</a></li>
+      <li><a href="#declarations">5. Declarations — 20s and 50s (“Trick Cards”)</a></li>
+      <li><a href="#bella">6. Bella</a></li>
+      <li><a href="#winning-a-hand">7. Winning a Hand and Bates</a></li>
+      <li><a href="#complete-shutout">8. Complete Shutout — Minus 100</a></li>
+      <li><a href="#tie-hand">9. Tie Hand</a></li>
+      <li><a href="#winning-the-game">10. Winning the Game</a></li>
+      <li><a href="#quick-reference">Quick Reference</a></li>
+      <li><a href="#brooklyn-klabber-board">Brooklyn Klabber Board</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section class="section" id="history" tabindex="-1">
+      <h2>History &amp; Origin of Yentas Klabber</h2>
+      <p>According to the accepted Yentas oral tradition — which is considerably more reliable than asking four Klabber players to agree on what happened five minutes ago — this particular variant took shape among Russian Jewish immigrants who settled in Brooklyn in the late 1980s and early 1990s.</p>
+      <p>The game traveled from kitchen tables and apartment living rooms into a distinctly Brooklyn ecosystem: neighborhood rivalries, family gatherings, local universities, late-night games, and the occasional table where somebody was absolutely certain that everyone else had been playing the rule wrong for twenty years.</p>
+      <p>As the years went on, Klabber remained less of a quiet card game and more of a highly structured method for four people to argue about mathematics. Disputes over Bella, trump, trick declarations, bates, ties, who was required to overtrump, and what somebody's uncle definitely said in 1994 became common. Friendships survived. Mostly.</p>
+      <p>After decades of games between players from different Brooklyn neighborhoods and local universities, it became clear that civilization required a single agreed-upon rule set. The unofficial but deeply authoritative Brooklyn Klabber Board was therefore called upon to settle the matter. After what historical records can only assume were calm, respectful, and completely uninterrupted deliberations, the official Brooklyn variant known as Yentas Klabber was established.</p>
+      <p>The rules were ultimately agreed upon under the guidance of the Board's principal representatives, the legendary Luna Park Lenny and Nice Guy Steven (aka Rudy), under the stewardship of Fun Eddie. Their mission was simple: preserve the game, standardize the arguments, and ensure that future generations would at least be fighting about strategy instead of fighting about the rules.</p>
+      <p>Today, Yentas Klabber represents the accumulated wisdom, grudges, compromises, disputed memories, and card-table diplomacy of several decades of Brooklyn play. The rules that follow should therefore be considered official — at least until somebody's father-in-law says, "That's not how we played it."</p>
+    </section>
+
+    <section class="section" id="objective-and-setup" tabindex="-1">
+      <h2>1. Objective and Setup</h2>
+      <ul>
+        <li>The first dealer is determined by choosing the highest card from the deck.</li>
+        <li>Four players form two fixed teams of two. Partners sit opposite each other.</li>
+        <li>Use a 32-card deck: 7, 8, 9, 10, Jack, Queen, King, Ace in each suit.</li>
+        <li>Each player ends with 8 cards.</li>
+        <li>Dealer rotates clockwise after every hand.</li>
+        <li>Play to either 501 points (short game) or 1001 points (long game), agreed before play begins.</li>
+        <li>Good faith misdealing is not penalized. A redeal follows.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="card-ranking" tabindex="-1">
+      <h2>2. Card Ranking and Point Values</h2>
+      <h3>Trump suit, highest to lowest</h3>
+      <ol>
+        <li>Jack — 20 points</li>
+        <li>9 — 14 points</li>
+        <li>Ace — 11 points</li>
+        <li>10 — 10 points</li>
+        <li>King — 4 points</li>
+        <li>Queen — 3 points</li>
+        <li>8 — 0 points</li>
+        <li>7 — 0 points</li>
+      </ol>
+      <h3>Non-trump suits, highest to lowest</h3>
+      <ol>
+        <li>Ace — 11 points</li>
+        <li>10 — 10 points</li>
+        <li>King — 4 points</li>
+        <li>Queen — 3 points</li>
+        <li>Jack — 2 points</li>
+        <li>9 — 0 points</li>
+        <li>8 — 0 points</li>
+        <li>7 — 0 points</li>
+      </ol>
+      <p>The final trick is worth an additional 10 points. There are 162 trick/card points available in a hand before Bella or other declarations are added.</p>
+    </section>
+
+    <section class="section" id="dealing-and-trump" tabindex="-1">
+      <h2>3. Dealing and Choosing Trump</h2>
+      <ul>
+        <li>Deal 6 cards to each player, three cards at a time, twice around until each player has six cards. When all cards are dealt and everyone has all their cards, turn one card face-up to propose a trump suit.</li>
+        <li>First round: starting with the player to the dealer's left and moving clockwise, each player either accepts the face-up suit as trump or passes.</li>
+        <li>If all four pass, begin a second round. Players may choose one of the other three suits as trump.</li>
+        <li>On the second round, the dealer cannot pass if everyone before the dealer passes. The dealer must choose a trump suit.</li>
+        <li>The team that chooses/accepts trump is the taking team for that hand.</li>
+        <li>Finish the deal so every player has 8 cards.</li>
+        <li>The dealer picks up the face-up card.</li>
+        <li>A seven of trump suit cannot be exchanged for the original face-up trump suit in a four player game.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="playing-a-trick" tabindex="-1">
+      <h2>4. Playing a Trick (aka “vzyatka”)</h2>
+      <ul>
+        <li>Player left of the dealer always starts the first trick by throwing down the first card. It can be any card the player wants.</li>
+        <li>You must follow the suit whenever you can.</li>
+        <li>If you cannot follow suit and an opponent is currently winning the trick, you must play a trump if you have one.</li>
+        <li>If an opponent has already trumped and you can play a higher trump, you must overtrump.</li>
+        <li>If your partner is currently winning the trick, you do not have to overtrump or beat your partner's trump. If you cannot follow the led suit, you may save a higher trump instead of wasting it on your partner's winning trick.</li>
+        <li>When trump is led, you must follow trump if you have one. If an opponent is winning with trump and you can beat that trump, you must do so. You do not have to beat your partner's winning trump.</li>
+        <li>The winner of each trick leads the next trick.</li>
+        <li>Any player can request to review the previous overturned trick, up until the current trick has been flipped over.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="declarations" tabindex="-1">
+      <h2>5. Declarations — 20s and 50s (“Trick Cards”)</h2>
+      <ul>
+        <li>A 3-card consecutive run in the same suit, referred to as a "tertz", is worth 20 points.</li>
+        <li>A 4-card or longer consecutive run in the same suit, referred to as a "fifty", is worth 50 points.</li>
+        <li>Sequence order is: Ace–King–Queen–Jack–10–9–8–7.</li>
+        <li>Declarations must be called before the first trick is picked up/cleared from the table. If not called in time, they are void. It's up to the player's discretion when they show the declaration as long as it's done so before the first trick has been overturned.</li>
+        <li>If only one team has declarations, that team scores its valid declarations.</li>
+        <li>If both teams have declarations, compare the best declaration on each team. A 50 beats a 20. If both are the same size, the declaration with the higher top card wins.</li>
+        <li>Only the team with the highest qualifying declaration scores its declarations.</li>
+        <li>Exact-equal declaration house rule: identical declarations cancel each other. If there is a nomination for objection with a second, the rule will come under group vote.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="bella" tabindex="-1">
+      <h2>6. Bella</h2>
+      <ul>
+        <li>King + Queen of trump is Bella and is worth 20 points.</li>
+        <li>Bella is separate from the 20/50 declaration comparison.</li>
+        <li>In this version, simply holding both cards is not enough. For Bella to count, your team must win at least one trick containing either the trump King or the trump Queen. Your team must call Bella before the last Queen or King book is taken, even if you lose the book. You cannot call Bella at the end of the game or after the last time you put down your Queen or King.</li>
+        <li>Calling Bella at least once before winning a trick with either a Queen or King, is enough to earn the points.</li>
+        <li>If the opposing team captures both the trump King and trump Queen when they are played, Bella is void and scores 0.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="winning-a-hand" tabindex="-1">
+      <h2>7. Winning a Hand and Bates</h2>
+      <ul>
+        <li>At the end of the hand, total the trick/card points, the 10-point last trick, and any valid Bella/declaration points.</li>
+        <li>The team that chose trump must finish with more points than the defending team to make the contract.</li>
+        <li>If the team that chose trump finishes with fewer points, that team receives 1 bate and the opposing team takes all of the points.</li>
+        <li>Bates carry from hand to hand.</li>
+        <li>When a team receives its 3rd bate, subtract 100 points from that team's game score, then reset that team's bate count to 0.</li>
+        <li>When counting points, round down on a 5 and up on a 6. For example, if points counted is 94, round down to a 90. If points counted is 96, round up to 100.</li>
+        <li>For simplicity sake, points can be rounded to the nearest ones or tens. For example, 94 points becomes 9, 126 points becomes 13.</li>
+      </ul>
+      <p><strong>Example:</strong> Team A has 420 points and 2 bates. Team A chooses trump and loses the hand. That is its 3rd bate, so Team A drops to 320 points and its bate counter resets to 0.</p>
+    </section>
+
+    <section class="section" id="complete-shutout" tabindex="-1">
+      <h2>8. Complete Shutout — Minus 100</h2>
+      <ul>
+        <li>If one team wins every trick and the other team does not pick up a single trick, the shut-out team loses 100 points from its game score.</li>
+        <li>The winning team does NOT receive an extra 100-point bonus; it scores the hand normally.</li>
+        <li>This is a separate -100 rule from the 3-bate penalty.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="tie-hand" tabindex="-1">
+      <h2>9. Tie Hand</h2>
+      <p>A tie hand is not settled like a normal hand. The result remains tied and the next hand determines what happens to those points.</p>
+      <p>For the tie rule, use this sequence:</p>
+      <ol>
+        <li>A hand ends both teams having the same number of points.</li>
+        <li>Treat the two shares as unresolved/held. Do not permanently assign the total points yet.</li>
+        <li>Dealer rotates normally to the next player.</li>
+        <li>Play the next hand normally. For purposes of resolving the prior tie, the team that finishes this new hand with more points is the winner of the resolving hand (i.e., if the team that played the trump in the prior hand wins, they get the points they won in both hands. If it loses, then it loses the points in the prior hand and is bated).</li>
+      </ol>
+      <p><strong>Important:</strong> the points in a tie should be considered pending until the following hand establishes which of the two scenarios applies.</p>
+    </section>
+
+    <section class="section" id="winning-the-game" tabindex="-1">
+      <h2>10. Winning the Game</h2>
+      <ul>
+        <li>The first team to reach the agreed target — 501 (51) or 1001 (101) — wins the game, after all scoring, bate penalties, shutout penalties, and any pending ties are resolved.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="quick-reference" tabindex="-1">
+      <h2>Quick Reference</h2>
+      <ul>
+        <li>Trump: J → 9 → A → 10 → K → Q → 8 → 7</li>
+        <li>Non-trump: A → 10 → K → Q → J → 9 → 8 → 7</li>
+        <li>Bella: K + Q of trump = 20, but your team must pick up at least one of those cards in a won trick.</li>
+        <li>3-card run = 20; 4+ card run = 50.</li>
+        <li>Dealer is forced to choose trump on the second pass if no one else chooses.</li>
+        <li>You must overtrump an opponent when required, but you do not have to overtrump your partner.</li>
+        <li>Losing after choosing trump = 1 bate.</li>
+        <li>3 bates = -100 points.</li>
+        <li>Complete shutout = -100 points to the shut-out team.</li>
+        <li>Same number of points on both teams = pending tie; the next hand resolves who receives those total points.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="brooklyn-klabber-board" tabindex="-1">
+      <h2>Brooklyn Klabber Board</h2>
+      <ul>
+        <li>Alex M. aka Big Al</li>
+        <li>Alex G. aka Siska</li>
+        <li>Eddie aka Fun Eddie</li>
+        <li>Gennady aka Tarakan</li>
+        <li>Igor aka Iggy</li>
+        <li>Lenny aka Luna Park Lenny</li>
+        <li>Leon aka Big Red</li>
+        <li>Mike aka Wolfie</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Yentas Klabber — established under the Brooklyn Klabber Board.</p>
+    <p><a href="Yentas%20Clabber.pdf.pdf" download>Download the PDF rules</a></p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
