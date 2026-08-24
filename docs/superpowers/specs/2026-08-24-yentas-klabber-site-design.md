@@ -30,7 +30,7 @@ Lean into the logo (option A):
 
 - **Palette:** deep navy, antique gold, cream, deep red accents
 - **Typography:** expressive serif for brand and headings; clean readable sans for body copy
-- **Hero:** full-bleed atmospheric navy/gold plane; logo as dominant brand mark; brand name hero-level; one short supporting line; one CTA (“Read the rules”). No cards, badges, or secondary content in the first viewport
+- **Hero:** full-bleed atmospheric navy/gold plane; logo as dominant brand mark; brand name hero-level; supporting line: “Four-player partnership Brooklyn Klabber — the official house rules.”; one CTA (“Read the rules”). No cards, badges, or secondary content in the first viewport
 - **Atmosphere:** textured/gradient navy background — not flat white
 - **Motion (minimum 2–3 intentional):**
   1. Smooth scroll from Contents click to target section
