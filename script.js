@@ -1,5 +1,5 @@
 (() => {
-  const FLASH_MS = 900;
+  const FLASH_MS = 1400;
   const contents = document.querySelector("nav.contents");
   if (!contents) return;
 
