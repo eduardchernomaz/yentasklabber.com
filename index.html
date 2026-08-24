@@ -11,7 +11,22 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#contents">Skip to contents</a>
+  <a class="skip-link" href="#history">Skip to rules</a>
+
+  <button
+    type="button"
+    class="menu-toggle"
+    id="menu-toggle"
+    aria-controls="contents"
+    aria-expanded="false"
+    aria-label="Open contents"
+  >
+    <span class="menu-toggle__bar" aria-hidden="true"></span>
+    <span class="menu-toggle__bar" aria-hidden="true"></span>
+    <span class="menu-toggle__bar" aria-hidden="true"></span>
+  </button>
+
+  <div class="contents-backdrop" id="contents-backdrop" hidden></div>
 
   <header class="hero" id="top">
     <div class="hero__inner">
@@ -19,13 +34,18 @@
       <h1 class="hero__title">Yentas Klabber</h1>
       <p class="hero__tagline">Four-player partnership Brooklyn Klabber — the official house rules.</p>
       <p class="hero__cta-wrap">
-        <a class="btn" href="#contents">Read the rules</a>
+        <button type="button" class="btn" id="hero-menu-btn">Read the rules</button>
       </p>
     </div>
   </header>
 
-  <nav class="contents" id="contents" aria-label="Table of contents">
-    <h2 class="contents__title">Contents</h2>
+  <nav class="contents" id="contents" aria-label="Table of contents" hidden>
+    <div class="contents__header">
+      <h2 class="contents__title">Contents</h2>
+      <button type="button" class="contents__close" id="contents-close" aria-label="Close contents">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
     <ol class="contents__list">
       <li><a href="#history">History &amp; Origin of Yentas Klabber</a></li>
       <li><a href="#objective-and-setup">1. Objective and Setup</a></li>

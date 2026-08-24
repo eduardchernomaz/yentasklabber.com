@@ -1,59 +1,43 @@
 (() => {
-  const FLASH_MS = 1400;
-  const contents = document.querySelector("nav.contents");
-  if (!contents) return;
+  const contents = document.getElementById("contents");
+  const toggle = document.getElementById("menu-toggle");
+  const backdrop = document.getElementById("contents-backdrop");
+  const closeBtn = document.getElementById("contents-close");
+  const heroMenuBtn = document.getElementById("hero-menu-btn");
+  if (!contents || !toggle) return;
 
   const prefersReducedMotion = () =>
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const flashSection = (el) => {
-    if (!el) return;
-    el.classList.remove("section--flash");
-    // force reflow so re-adding restarts transition
-    void el.offsetWidth;
-    el.classList.add("section--flash");
-    window.clearTimeout(el._flashTimer);
-    el._flashTimer = window.setTimeout(() => {
-      el.classList.remove("section--flash");
-    }, FLASH_MS);
+  const setMenuOpen = (open) => {
+    contents.hidden = !open;
+    if (backdrop) backdrop.hidden = !open;
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    toggle.setAttribute("aria-label", open ? "Close contents" : "Open contents");
+    document.body.classList.toggle("is-menu-open", open);
+    if (open) {
+      const focusTarget = closeBtn || contents.querySelector("a");
+      if (focusTarget) focusTarget.focus();
+    } else {
+      toggle.focus();
+    }
   };
 
-  let cancelPendingScrollFlash = null;
+  const openMenu = () => setMenuOpen(true);
+  const closeMenu = () => setMenuOpen(false);
+  const toggleMenu = () => setMenuOpen(contents.hidden);
 
-  const flashAfterScrollSettles = (target) => {
-    if (cancelPendingScrollFlash) cancelPendingScrollFlash();
+  toggle.addEventListener("click", toggleMenu);
+  if (closeBtn) closeBtn.addEventListener("click", closeMenu);
+  if (backdrop) backdrop.addEventListener("click", closeMenu);
+  if (heroMenuBtn) heroMenuBtn.addEventListener("click", openMenu);
 
-    const SCROLL_IDLE_MS = 130;
-    const SCROLL_MAX_MS = 2500;
-    let idleTimer = null;
-    let maxTimer = null;
-
-    const cleanup = () => {
-      window.removeEventListener("scroll", onScroll);
-      if (idleTimer) window.clearTimeout(idleTimer);
-      if (maxTimer) window.clearTimeout(maxTimer);
-      idleTimer = null;
-      maxTimer = null;
-      if (cancelPendingScrollFlash === cleanup) {
-        cancelPendingScrollFlash = null;
-      }
-    };
-
-    const triggerFlash = () => {
-      cleanup();
-      flashSection(target);
-    };
-
-    const onScroll = () => {
-      if (idleTimer) window.clearTimeout(idleTimer);
-      idleTimer = window.setTimeout(triggerFlash, SCROLL_IDLE_MS);
-    };
-
-    cancelPendingScrollFlash = cleanup;
-    window.addEventListener("scroll", onScroll, { passive: true });
-    idleTimer = window.setTimeout(triggerFlash, SCROLL_IDLE_MS);
-    maxTimer = window.setTimeout(triggerFlash, SCROLL_MAX_MS);
-  };
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !contents.hidden) {
+      event.preventDefault();
+      closeMenu();
+    }
+  });
 
   const scrollToId = (id, updateHash) => {
     const target = document.getElementById(id);
@@ -62,11 +46,6 @@
     target.scrollIntoView({ behavior, block: "start" });
     if (updateHash) {
       history.pushState(null, "", `#${id}`);
-    }
-    if (behavior === "auto") {
-      flashSection(target);
-    } else {
-      flashAfterScrollSettles(target);
     }
     if (typeof target.focus === "function") {
       target.focus({ preventScroll: true });
@@ -79,21 +58,14 @@
     const id = decodeURIComponent(link.getAttribute("href").slice(1));
     if (!id) return;
     event.preventDefault();
-    scrollToId(id, true);
+    closeMenu();
+    // Let the drawer start closing before scrolling
+    requestAnimationFrame(() => scrollToId(id, true));
   });
-
-  const heroCta = document.querySelector('.hero a.btn[href="#contents"]');
-  if (heroCta) {
-    heroCta.addEventListener("click", (event) => {
-      event.preventDefault();
-      scrollToId("contents", true);
-    });
-  }
 
   const onHash = () => {
     const id = decodeURIComponent(location.hash.replace(/^#/, ""));
-    if (!id) return;
-    // defer so layout is ready
+    if (!id || id === "contents") return;
     requestAnimationFrame(() => scrollToId(id, false));
   };
 
