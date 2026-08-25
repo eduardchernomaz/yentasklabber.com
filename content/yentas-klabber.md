@@ -28,7 +28,7 @@ As the years went on, Klabber remained less of a quiet card game and more of a h
 
 After decades of games between players from different Brooklyn neighborhoods and local universities, it became clear that civilization required a single agreed-upon rule set. The unofficial but deeply authoritative Brooklyn Klabber Board was therefore called upon to settle the matter. After what historical records can only assume were calm, respectful, and completely uninterrupted deliberations, the official Brooklyn variant known as Yentas Klabber was established.
 
-The rules were ultimately agreed upon under the guidance of the Board's principal representatives, the legendary Luna Park Lenny and Nice Guy Steven, under the stewardship of Fun Eddie. Their mission was simple: preserve the game, standardize the arguments, and ensure that future generations would at least be fighting about strategy instead of fighting about the rules.
+The rules were ultimately agreed upon under the guidance of the Board's principal representatives, the legendary Lenny and Steven, under the stewardship of Eddie. Their mission was simple: preserve the game, standardize the arguments, and ensure that future generations would at least be fighting about strategy instead of fighting about the rules.
 
 Today, Yentas Klabber represents the accumulated wisdom, grudges, compromises, disputed memories, and card-table diplomacy of several decades of Brooklyn play. The rules that follow should therefore be considered official — at least until somebody's father-in-law says, "That's not how we played it."
 
@@ -68,9 +68,9 @@ The final trick is worth an additional 10 points. There are 162 trick/card point
 ## 4. Playing a Trick (aka "vzyatka")
 
 - Player left of the dealer always starts the first trick by throwing down the first card. It can be any card the player wants.
-- You must follow the suit whenever you can.
-- If you cannot follow suit and an opponent is currently winning the trick, you must play a trump if you have one.
-- If an opponent has already trumped and you can play a higher trump, you must overtrump.
+- The next players in clockwise manner left of the dealer must follow the suit.
+- If a player cannot follow suit and an opponent is currently winning the trick, that player must play a trump if you have one.
+- If an opponent has already trumped and you can play a higher trump, you must overtrump if you cannot follow the same suit.
 - If your partner is currently winning the trick, you do not have to overtrump or beat your partner's trump. If you cannot follow the led suit, you may save a higher trump instead of wasting it on your partner's winning trick.
 - When trump is led, you must follow trump if you have one. If an opponent is winning with trump and you can beat that trump, you must do so. You do not have to beat your partner's winning trump.
 - The winner of each trick leads the next trick.
